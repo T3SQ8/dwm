@@ -127,9 +127,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Next,   shiftview,      { .i = +1 } },        /* Switch to next tag */
 	{ MODKEY,                       XK_Prior,  shiftview,      { .i = -1 } },        /* Switch to previous tag */
 	{ MODKEY|ALTKEY,                XK_q,      quit,           {0} },                /* Kill Dwm */
-	{ NULL,                     XF86XK_AudioLowerVolume,      spawn,           SHCMD("amixer sset Master 5%-") },
-	{ NULL,                     XF86XK_AudioRaiseVolume,      spawn,           SHCMD("amixer sset Master 5%+") },
-	{ NULL,                     XF86XK_AudioMute,             spawn,           SHCMD("amixer sset Master toggle") },
+	{ NULL,                     XF86XK_AudioLowerVolume,      spawn,           SHCMD("pulsemixer --change-volume -5") },
+	{ NULL,                     XF86XK_AudioRaiseVolume,      spawn,           SHCMD("pulsemixer --change-volume +5") },
+	{ NULL,                     XF86XK_AudioMute,             spawn,           SHCMD("pulsemixer --toggle-mute") },
 	{ NULL,                     XF86XK_MonBrightnessUp,       spawn,           SHCMD("xbacklight -inc 10") },
 	{ NULL,                     XF86XK_MonBrightnessDown,     spawn,           SHCMD("xbacklight -dec 10") },
 	{ ControlMask,                  XK_space,                     spawn,           SHCMD("switchkbd") },
