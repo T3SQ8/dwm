@@ -134,6 +134,7 @@ static const Key keys[] = {
 	{ NULL,                         XF86XK_MonBrightnessUp,    spawn,           SHCMD("xbacklight -inc 10") },
 	{ NULL,                         XF86XK_MonBrightnessDown,  spawn,           SHCMD("xbacklight -dec 10") },
 	{ ControlMask,                  XK_space,                  spawn,           SHCMD("switchkbd") },
+	{ NULL,                         XF86XK_AudioMicMute,       spawn,           SHCMD("pulsemixer --id source-1 --toggle-mute") },
 };
 
 /* button definitions */
